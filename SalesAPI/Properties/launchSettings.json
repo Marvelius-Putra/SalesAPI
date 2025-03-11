@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "SalesAPI": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7070",
+      "launchBrowser": false
+    }
+  }
+}
