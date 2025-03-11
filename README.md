@@ -3,6 +3,7 @@ Project to create API CRUD untuk Customer, Product, Supplier, and Sales
 
 ## Documents
 ### SQLITE: https://github.com/Marvelius-Putra/SalesAPI/blob/master/MySales.db
+- Dont forget to change the path in the **appSettings.json**
 ### Swagger: 
 - Download the project
 - Run The application
