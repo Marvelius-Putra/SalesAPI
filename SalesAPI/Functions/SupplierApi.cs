@@ -39,7 +39,7 @@ namespace SalesAPI.Functions
         [OpenApiResponseWithBody(HttpStatusCode.OK, "application/json", typeof(Supplier), Description = "Supplier details")]
         [OpenApiResponseWithoutBody(HttpStatusCode.NotFound, Description = "Supplier not found")]
         public async Task<HttpResponseData> GetSupplierById(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "suppliers/{id:int}")] HttpRequestData req, int id)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "get", Route = "suppliers/{id}")] HttpRequestData req, int id)
         {
             var supplier = await _supplierRepository.GetByIdAsync(id);
             if (supplier == null)
@@ -84,7 +84,7 @@ namespace SalesAPI.Functions
         [OpenApiResponseWithoutBody(HttpStatusCode.NotFound, Description = "Supplier not found")]
         [OpenApiResponseWithoutBody(HttpStatusCode.BadRequest, Description = "Invalid request payload")]
         public async Task<HttpResponseData> UpdateSupplier(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "suppliers/{id:int}")] HttpRequestData req, int id)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "put", Route = "suppliers/{id}")] HttpRequestData req, int id)
         {
             var existingSupplier = await _supplierRepository.GetByIdAsync(id);
             if (existingSupplier == null)
@@ -114,7 +114,7 @@ namespace SalesAPI.Functions
         [OpenApiResponseWithoutBody(HttpStatusCode.NoContent, Description = "Supplier deleted")]
         [OpenApiResponseWithoutBody(HttpStatusCode.NotFound, Description = "Supplier not found")]
         public async Task<HttpResponseData> DeleteSupplier(
-            [HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route = "suppliers/{id:int}")] HttpRequestData req, int id)
+            [HttpTrigger(AuthorizationLevel.Anonymous, "delete", Route = "suppliers/{id}")] HttpRequestData req, int id)
         {
             var existingSupplier = await _supplierRepository.GetByIdAsync(id);
             if (existingSupplier == null)
