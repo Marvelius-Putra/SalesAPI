@@ -9,7 +9,7 @@ Project to create API CRUD untuk Customer, Product, Supplier, and Sales
 - Go to http://localhost:7070/api/swagger/ui
 
 
-Here is the application Features
+Here are the application Features
 ## **Customer**
 - Get All Customers
 - Create New Customer
